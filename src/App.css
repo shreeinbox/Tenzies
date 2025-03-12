@@ -13,7 +13,7 @@ main{
   background-repeat: no-repeat;
   margin:20px;
   width: auto;
-  height: 90vh;
+  height: auto;
   border-radius: 10px;
   display: flex;
   justify-content: center;
