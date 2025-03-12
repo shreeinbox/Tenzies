@@ -1,0 +1,89 @@
+* {
+  box-sizing: border-box;
+}
+body{
+  margin:0;
+  padding: 0;
+  background-color:#0B2434;
+}
+main{
+  background-color: #F5F5F5;
+  background-image: url('./assets/images/table.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  margin:20px;
+  width: auto;
+  height: 90vh;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid yellow;
+  gap: 2em;
+}
+#container{
+  display:grid;
+  grid-template: 1fr 1fr/ repeat(5, 1fr);
+  row-gap: 2em;
+  column-gap: 1.5em;
+}
+.btn{
+  padding:0.5em 1em;
+  font-family: Karla, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color:#2B283A;
+  font-weight: 700;
+  border-radius: 3.8px;
+  box-shadow: 0 2px 2px #00000026;
+  width: 40px;
+  height: 40px;
+}
+.roll{
+  color:#FFFFFF;
+  background-color: #609397;
+  width: auto;
+}
+.btnSelected{
+  border-color: green;
+  box-shadow: 0px 0px 2px 2px green;
+  opacity: 0.8;
+}
+.title,.info, h3{
+  margin: 0;
+  padding: 0.2em;
+  justify-self: center;
+  text-align: center;
+}
+.footer{
+  font-size:5px;
+
+}
+
+.backgroundOption1{
+  background-image: url('./assets/images/dice1.png');
+  background-position: center;
+}
+.backgroundOption2{
+  background-image: url('./assets/images/dice2.png');
+  background-position: center;
+}
+.backgroundOption3{
+  background-image: url('./assets/images/dice3.png');
+  background-position: center;
+}
+.backgroundOption4{
+  background-image: url('./assets/images/dice4.png');
+  background-position: center;
+}
+.backgroundOption5{
+  background-image: url('./assets/images/dice5.png');
+  background-position: center;
+}
+.backgroundOption6{
+  background-image: url('./assets/images/dice6.png');
+  background-position: center;
+}
+.counter{
+  margin:0;
+  padding: 0;
+}
