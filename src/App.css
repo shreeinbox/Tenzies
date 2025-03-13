@@ -19,9 +19,36 @@ main{
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  border: 1px solid yellow;
-  gap: 2em;
+  gap :0.5em;
 }
+.header{
+  border-radius: 10px 10px 0px 0px;
+  box-shadow: 1px 1px 2px 2px beige;
+  text-align: center;
+  padding: 0;
+}
+.header h1, .header p{
+  margin-top:0;
+  margin-bottom: 0.8em;
+}
+.infoBoard{
+  display: flex;
+  margin:0;
+  justify-content:space-evenly;
+  width: 100%;
+  align-items: center;
+}
+.infoBoard {
+  color:#000;
+  margin: 0;
+}
+.popUp{
+  background-color: #000;
+  color: white;
+  padding: 0.2em 0.4em;
+  margin-top: 0;
+}
+/* Dice Area */
 #container{
   display:grid;
   grid-template: 1fr 1fr/ repeat(5, 1fr);
@@ -34,29 +61,22 @@ main{
   color:#2B283A;
   font-weight: 700;
   border-radius: 3.8px;
-  box-shadow: 0 2px 2px #00000026;
   width: 40px;
   height: 40px;
 }
 .roll{
   color:#FFFFFF;
-  background-color: #609397;
+  background-color: #065c26;
   width: auto;
 }
 .btnSelected{
   border-color: green;
   box-shadow: 0px 0px 2px 2px green;
   opacity: 0.8;
+  transition: transform 0.3s ease-in-out;
 }
-.title,.info, h3{
-  margin: 0;
-  padding: 0.2em;
-  justify-self: center;
-  text-align: center;
-}
-.footer{
-  font-size:5px;
-
+.btnSelected:hover{
+  transform: scale(1.2) rotate(5deg);
 }
 
 .backgroundOption1{
@@ -83,7 +103,11 @@ main{
   background-image: url('./assets/images/dice6.png');
   background-position: center;
 }
-.counter{
-  margin:0;
-  padding: 0;
+.footer{
+  font-size:5px;
+}
+@media (min-width: 550px){
+  .header{
+    width:100%;
+  }
 }
