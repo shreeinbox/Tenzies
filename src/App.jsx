@@ -7,7 +7,7 @@ import Dice from './Dice';
 
 function App() {
   
-  const [buttons, setButtons] = useState(generateRandomDice())
+  const [buttons, setButtons] = useState(()=>generateRandomDice())
   const [counter, setCounter] = useState(0)
   const [timer, setTimer] = useState(30)
   const [gameOver, setGameOver] = useState(false)
