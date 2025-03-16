@@ -11,6 +11,7 @@ main{
   background-image: url('./assets/images/table.jpg');
   background-position: center;
   background-repeat: no-repeat;
+  background-size: cover;
   margin:20px;
   width: auto;
   height: auto;
@@ -23,9 +24,13 @@ main{
 }
 .header{
   border-radius: 10px 10px 0px 0px;
-  box-shadow: 1px 1px 2px 2px beige;
   text-align: center;
-  padding: 0;
+  margin-top: 0.2em;
+}
+.header > p{
+  padding: 1em;
+  background-color: rgb(255, 255, 255);
+  opacity: 0.6;
 }
 .header h1, .header p{
   margin-top:0;

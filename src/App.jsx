@@ -2,7 +2,6 @@
 import './App.css'
 import { nanoid } from 'nanoid';
 import { useEffect, useRef, useState } from 'react';
-import Counter from './Counter';
 import Dice from './Dice';
 
 
@@ -17,27 +16,20 @@ function App() {
   
   if(buttons.every(dice => dice.value === buttons[0].value && dice.isHeld)){
     console.log('won')
-    //gameWon = true
     gameWon.current = true
   }
   function startGame(){
-    //console.log('StartGame')
     setStartGameInd(true)
   }
   useEffect (()=>{
     if(!startGameInd) return;
       const intervalId = setInterval(()=>{
-      //console.log('intervalid:' + intervalId)
-      //console.log('gamewon.current::'+ gameWon.current)
       if(gameWon.current){
         clearInterval(intervalId)
       }
       else{
         setTimer((prevTimer)=>{
           if(prevTimer <= 0){
-            console.log('Clearing this id as it is timeup:' + intervalId)
-            console.log('timervalue:' + prevTimer)
-            console.log('time is up')
             clearInterval(intervalId)
             return 0; //this is to set the x state back to 0
           }
@@ -49,7 +41,6 @@ function App() {
 
     return (()=>{
       if(intervalId){
-        console.log('Clearing this id in useeffect return' + intervalId)
         clearInterval(intervalId)
       }
     })
@@ -87,10 +78,6 @@ function App() {
 
   function handleRoll(){
     if(gameWon.current){
-      //console.log('not reachable area')
-      //setButtons(generateRandomDice)
-      //setCounter(0)
-      //setTimer(0)
       gameWon.current = false;
     } else{
       setCounter(counter+1)
@@ -101,7 +88,7 @@ function App() {
       })
     }
   }
-//  console.log('hey:' + startGameInd)
+
   return (
     <main>
       <div className='header'>
@@ -116,18 +103,6 @@ function App() {
       {startGameInd &&
         <Dice buttons={buttons} handleBtn={handleBtn} />
       }
-      {/* <div id='container'>
-        {buttons.map((element)=>{
-          return <button className={element.isHeld?`btn btnSelected backgroundOption${element.value}` : `btn backgroundOption${element.value}`} 
-                         onClick={handleBtn} 
-                         key={element.id}
-                         id={element.id}
-                         >
-                            
-                 </button>
-        })
-        }
-      </div> */}
       {
       !startGameInd ? 
         <button onClick={startGame} className='btn roll'>Start Game</button>
